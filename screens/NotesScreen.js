@@ -19,7 +19,7 @@ export default function NotesScreen({ route, navigation }) {
         tx.executeSql(
           "SELECT * FROM notes",
           null,
-          (txobj, {rows: { _array}}) => setNotes(_array),
+          (txobj, {rows: { _array }}) => setNotes(_array),
           (txobj, error) => console.log("error ", error)
         );
       });
@@ -116,6 +116,7 @@ export default function NotesScreen({ route, navigation }) {
       <FlatList
         style={{ width: "100%" }}
         data={notes}
+        keyExtractor={(item) => item.id.toString()} 
         renderItem={renderItem}
       />
     </View>
