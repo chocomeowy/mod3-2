@@ -1,14 +1,16 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { createStackNavigator, HeaderTitle } from "@react-navigation/stack";
 import * as SQLite from "expo-sqlite";
+import { useEffect } from "react";
 
 const db = SQLite.openDatabase("notes.db")
 
 function NotesScreen({ navigation }) {
- return <View style={styles.container}></View>;
-}
+  return <View style={styles.container}></View>;
+ }
+ 
 
 const Stack = createStackNavigator();
 
@@ -37,6 +39,8 @@ export default function App() {
    </NavigationContainer>
  );
 }
+
+
 
 const styles = StyleSheet.create({
  container: {
