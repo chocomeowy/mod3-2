@@ -5,7 +5,7 @@ export default function AddScreen({ navigation }) {
     const [text, setText] = useState("");
    
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center",backgroundColor: "#ccccff" }}>
         <Text style={styles.label}>Add your todo</Text>
         <TextInput
           style={styles.textInput}
@@ -40,13 +40,14 @@ export default function AddScreen({ navigation }) {
     label: {
       fontWeight: "bold",
       fontSize: 24,
+      
     },
     textInput: {
       margin: 20,
-      borderWidth: 1,
+      borderWidth: 2,
       width: "80%",
       padding: 10,
-      borderColor: "#ccc",
+      borderColor: "#000",
     },
     buttons: {
       flexDirection: "row",
